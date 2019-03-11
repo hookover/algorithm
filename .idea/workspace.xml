@@ -105,12 +105,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build 43.字符串相乘.go">
+  <component name="RunManager" selected="Go Build.go build 151.翻转字符串里的单词.go">
     <configuration name="go build 14.最长公共前缀.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/leecode/14.最长公共前缀.go" />
+      <package value="github.com/hookover/algorithm" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build 151.翻转字符串里的单词.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="algorithm" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/leecode/151.翻转字符串里的单词.go" />
       <package value="github.com/hookover/algorithm" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
@@ -144,6 +153,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build 151.翻转字符串里的单词.go" />
         <item itemvalue="Go Build.go build 43.字符串相乘.go" />
         <item itemvalue="Go Build.go build 14.最长公共前缀.go" />
         <item itemvalue="Go Build.go build 3.无重复字符的最长子串.go" />
