@@ -17,10 +17,8 @@ func searchWord(board [][]byte, word string, index, startX, startY int) bool {
 			newX := startX + d[i][0]
 			newY := startY + d[i][1]
 
-			if inArea(newX, newY) && !visited[newX][newY] {
-				if searchWord(board, word, index+1, newX, newY) {
-					return true
-				}
+			if inArea(newX, newY) && !visited[newX][newY] && searchWord(board, word, index+1, newX, newY) {
+				return true
 			}
 		}
 		visited[startX][startY] = false
@@ -60,8 +58,8 @@ func main() {
 		{'A', 'D', 'E', 'E'},
 	}
 
-	fmt.Println(exist(board,"ABCCEDA"))
-	fmt.Println(exist(board,"ABCESE"))
-	fmt.Println(exist(board,"DFCSE"))
-	fmt.Println(exist(board,"AFOPD"))
+	fmt.Println(exist(board, "ABCCEDA"))
+	fmt.Println(exist(board, "ABCESE"))
+	fmt.Println(exist(board, "DFCSE"))
+	fmt.Println(exist(board, "AFOPD"))
 }
