@@ -6,12 +6,12 @@ var visited [][]bool
 var d = [][]int{{0, -1}, {0, 1}, {-1, 0}, {1, 0}}
 var m, n int
 
-func searchWord(board [][]int, word string, index, startX, startY int) bool {
+func searchWord(board [][]byte, word string, index, startX, startY int) bool {
 	if index == len(word)-1 {
-		return board[startX][startY] == int(word[index])
+		return board[startX][startY] == word[index]
 	}
 
-	if board[startX][startY] == int(word[index]) {
+	if board[startX][startY] == word[index] {
 		visited[startX][startY] = true
 		for i := 0; i < 4; i++ {
 			newX := startX + d[i][0]
@@ -32,7 +32,7 @@ func inArea(x, y int) bool {
 	return x >= 0 && y >= 0 && x < m && y < n
 }
 
-func exists(board [][]int, search string) bool {
+func exist(board [][]byte, search string) bool {
 	if len(board) == 0 {
 		panic("board is empty")
 	}
@@ -54,14 +54,14 @@ func exists(board [][]int, search string) bool {
 }
 
 func main() {
-	board := [][]int{
+	board := [][]byte{
 		{'A', 'B', 'C', 'E'},
 		{'S', 'F', 'C', 'S'},
 		{'A', 'D', 'E', 'E'},
 	}
 
-	fmt.Println(exists(board,"ABCCEDA"))
-	fmt.Println(exists(board,"ABCESE"))
-	fmt.Println(exists(board,"DFCSE"))
-	fmt.Println(exists(board,"AFOPD"))
+	fmt.Println(exist(board,"ABCCEDA"))
+	fmt.Println(exist(board,"ABCESE"))
+	fmt.Println(exist(board,"DFCSE"))
+	fmt.Println(exist(board,"AFOPD"))
 }
